@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<form action="/my_search/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
